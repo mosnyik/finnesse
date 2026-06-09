@@ -45,6 +45,19 @@ importers:
       typescript:
         specifier: ^5
         version: 5.9.3
+    optionalDependencies:
+      '@next/swc-darwin-arm64':
+        specifier: 16.2.8
+        version: 16.2.8
+      '@next/swc-darwin-x64':
+        specifier: 16.2.8
+        version: 16.2.8
+      '@next/swc-linux-x64-gnu':
+        specifier: 16.2.8
+        version: 16.2.8
+      '@next/swc-linux-x64-musl':
+        specifier: 16.2.8
+        version: 16.2.8
 
 packages:
 
@@ -369,6 +382,32 @@ packages:
 
   '@next/eslint-plugin-next@16.3.0-preview.0':
     resolution: {integrity: sha512-YydVyFAX99hUv+wCVxfzZAr9IeBOMyEgbX/S/38pDSvklolVQ2550QGkQzJW/StlCEmX7/CRFWrQ83SM+ahzUA==}
+
+  '@next/swc-darwin-arm64@16.2.8':
+    resolution: {integrity: sha512-R/MDVX4Cj+bzvTNkDWNyA09yCPBZB0J1m8P3VAmWAzx/J7DctA1wxya1LU3CcPv2szER3AImHEtsgScauH8SsQ==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@next/swc-darwin-x64@16.2.8':
+    resolution: {integrity: sha512-XH2u8C/meLJmEZbN0G5MRZp8tvxBz5KQ+xv4vX34zL8gL3//5qkc5M/aLsvNAfg5/KbcjIVe3h6aiO0wJcNWKA==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@next/swc-linux-x64-gnu@16.2.8':
+    resolution: {integrity: sha512-SD/R9QU6+wUB3lH6InhOLu1eP3wle4sSjsNdMwk24yFwaWUB5TAtscvFbOqh1AYBsJvHRez3tYHETfbBFd4dRg==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@next/swc-linux-x64-musl@16.2.8':
+    resolution: {integrity: sha512-F1Al3cRKhYR7/V1RaXnHceqilNLFDe47w7Li/Asph1SklaHHm/b2FahLar2nWct9l9K143NlqbAUFQMjx30QYA==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
 
   '@next/swc-win32-x64-msvc@16.2.8':
     resolution: {integrity: sha512-xfGxs1zIkTOLzH8i1WWCeTqQhNqyrv3aVT55PMy7Ul3dfxlA3In7hNEJ3Uo2qpalEBOlkG6G6FLRMWbUrxL+qQ==}
@@ -2250,6 +2289,18 @@ snapshots:
   '@next/eslint-plugin-next@16.3.0-preview.0':
     dependencies:
       fast-glob: 3.3.1
+
+  '@next/swc-darwin-arm64@16.2.8':
+    optional: true
+
+  '@next/swc-darwin-x64@16.2.8':
+    optional: true
+
+  '@next/swc-linux-x64-gnu@16.2.8':
+    optional: true
+
+  '@next/swc-linux-x64-musl@16.2.8':
+    optional: true
 
   '@next/swc-win32-x64-msvc@16.2.8': {}
 
