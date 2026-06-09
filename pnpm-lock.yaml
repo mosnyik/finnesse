@@ -18,6 +18,9 @@ importers:
         specifier: 19.2.7
         version: 19.2.7(react@19.2.7)
     devDependencies:
+      '@next/swc-win32-x64-msvc':
+        specifier: ^16.2.8
+        version: 16.2.8
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.3.0
@@ -366,6 +369,12 @@ packages:
 
   '@next/eslint-plugin-next@16.3.0-preview.0':
     resolution: {integrity: sha512-YydVyFAX99hUv+wCVxfzZAr9IeBOMyEgbX/S/38pDSvklolVQ2550QGkQzJW/StlCEmX7/CRFWrQ83SM+ahzUA==}
+
+  '@next/swc-win32-x64-msvc@16.2.8':
+    resolution: {integrity: sha512-xfGxs1zIkTOLzH8i1WWCeTqQhNqyrv3aVT55PMy7Ul3dfxlA3In7hNEJ3Uo2qpalEBOlkG6G6FLRMWbUrxL+qQ==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2241,6 +2250,8 @@ snapshots:
   '@next/eslint-plugin-next@16.3.0-preview.0':
     dependencies:
       fast-glob: 3.3.1
+
+  '@next/swc-win32-x64-msvc@16.2.8': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
