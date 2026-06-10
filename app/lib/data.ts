@@ -1,6 +1,6 @@
 export const DISCOVERY_CALL_URL = "/contact";
-export const PHONE_NUMBER = "(800) 000-0000";
-export const PHONE_HREF = "tel:8000000000";
+export const PHONE_NUMBER = "+1 (404) 786-9467";
+export const PHONE_HREF = "tel:+14047869467";
 export const EMAIL = "info@finesseplans.com";
 export const ADDRESS = "";
 
