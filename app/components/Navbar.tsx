@@ -79,10 +79,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-3 flex-shrink-0 group"
+            className="flex items-center gap-3 shrink-0 group"
             onClick={() => setIsMenuOpen(false)}
           >
-            <div className="relative w-10 h-10 flex-shrink-0">
+            <div className="relative w-10 h-10 shrink-0">
               <Image
                 src="/logos/Finesse%20Plans%20Logo/finesse-3.png"
                 alt="Finesse Plans"
@@ -141,7 +141,7 @@ export default function Navbar() {
                           className={`flex items-center gap-2 px-4 py-2.5 text-sm transition-colors duration-150 ${pathname === sub.href ? "bg-blue-pale text-brand font-semibold" : "text-navy hover:bg-blue-pale hover:text-brand"}`}
                           onClick={() => setIsResourcesOpen(false)}
                         >
-                          <span className="w-1.5 h-1.5 rounded-full bg-brand-light flex-shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-brand-light shrink-0" />
                           {sub.label}
                         </Link>
                       ))}
@@ -185,7 +185,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden flex items-center gap-2 text-white cursor-pointer px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 min-h-[44px]"
+            className="lg:hidden flex items-center gap-2 text-white cursor-pointer px-3 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 min-h-11"
             onClick={() => setIsMenuOpen((v) => !v)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
@@ -230,7 +230,7 @@ export default function Navbar() {
               item.dropdown ? (
                 <div key={item.label}>
                   <button
-                    className={`flex items-center justify-between w-full px-4 py-4 font-medium cursor-pointer rounded-xl transition-colors duration-200 text-left min-h-[44px] ${isActive("/resources") ? "text-brand-light bg-white/10 border-l-2 border-brand" : "text-white/90 hover:text-white hover:bg-white/5"}`}
+                    className={`flex items-center justify-between w-full px-4 py-4 font-medium cursor-pointer rounded-xl transition-colors duration-200 text-left min-h-11 ${isActive("/resources") ? "text-brand-light bg-white/10 border-l-2 border-brand" : "text-white/90 hover:text-white hover:bg-white/5"}`}
                     onClick={() =>
                       setIsMobileResourcesOpen((v) => !v)
                     }
@@ -238,7 +238,7 @@ export default function Navbar() {
                   >
                     {item.label}
                     <svg
-                      className={`w-4 h-4 flex-shrink-0 transition-transform duration-200 ${isMobileResourcesOpen ? "rotate-180" : ""}`}
+                      className={`w-4 h-4 shrink-0 transition-transform duration-200 ${isMobileResourcesOpen ? "rotate-180" : ""}`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -258,7 +258,7 @@ export default function Navbar() {
                         <Link
                           key={sub.href}
                           href={sub.href}
-                          className={`block px-4 py-3 text-sm rounded-lg transition-colors duration-200 min-h-[44px] flex items-center ${pathname === sub.href ? "text-white font-medium bg-white/8" : "text-white/70 hover:text-white hover:bg-white/5"}`}
+                          className={`px-4 py-3 text-sm rounded-lg transition-colors duration-200 min-h-11 flex items-center ${pathname === sub.href ? "text-white font-medium bg-white/8" : "text-white/70 hover:text-white hover:bg-white/5"}`}
                           onClick={() => {
                             setIsMenuOpen(false);
                             setIsMobileResourcesOpen(false);
@@ -274,7 +274,7 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`block px-4 py-4 font-medium rounded-xl transition-colors duration-200 min-h-[44px] flex items-center ${isActive(item.href) ? "text-white bg-white/10 border-l-2 border-brand" : "text-white/90 hover:text-white hover:bg-white/5"}`}
+                  className={`px-4 py-4 font-medium rounded-xl transition-colors duration-200 min-h-11 flex items-center ${isActive(item.href) ? "text-white bg-white/10 border-l-2 border-brand" : "text-white/90 hover:text-white hover:bg-white/5"}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
@@ -285,7 +285,7 @@ export default function Navbar() {
             <div className="pt-4 mt-4 border-t border-white/10">
               <a
                 href={PHONE_HREF}
-                className="flex items-center gap-3 px-4 py-4 text-white font-medium hover:bg-white/5 rounded-xl transition-colors duration-200 min-h-[44px]"
+                className="flex items-center gap-3 px-4 py-4 text-white font-medium hover:bg-white/5 rounded-xl transition-colors duration-200 min-h-11"
               >
                 <svg
                   className="w-5 h-5 text-brand"

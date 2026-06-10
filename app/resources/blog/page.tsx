@@ -127,7 +127,7 @@ export default function BlogPage() {
                 key={post.id}
                 className="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col"
               >
-                <div className="h-44 relative overflow-hidden flex-shrink-0">
+                <div className="h-44 relative overflow-hidden shrink-0">
                   <Image
                     src={post.image ?? "/images/blog-financial-planning.jpg"}
                     alt={post.title}

@@ -85,7 +85,7 @@ export default function AboutPage() {
                 </svg>
               </Link>
             </div>
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden relative">
+            <div className="aspect-4/3 rounded-3xl overflow-hidden relative">
               <Image
                 src="/images/card-team-advisor.jpg"
                 alt="Professional financial advisor meeting with clients"
@@ -144,7 +144,7 @@ export default function AboutPage() {
               >
                 <div className="flex items-start gap-4 mb-5">
                   <div
-                    className={`${pillar.bg} text-white text-xs font-bold w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0`}
+                    className={`${pillar.bg} text-white text-xs font-bold w-10 h-10 rounded-xl flex items-center justify-center shrink-0`}
                   >
                     {pillar.num}
                   </div>

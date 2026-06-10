@@ -95,7 +95,7 @@ export default function ResourcesPage() {
                 <ul className="space-y-2 mb-6">
                   {cat.items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-gray-500 text-sm">
-                      <span className="w-1.5 h-1.5 bg-brand rounded-full flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 bg-brand rounded-full shrink-0" />
                       {item}
                     </li>
                   ))}

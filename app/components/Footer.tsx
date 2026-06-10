@@ -118,7 +118,7 @@ export default function Footer() {
                 <input
                   type="checkbox"
                   id="newsletterConsent"
-                  className="mt-0.5 w-4 h-4 rounded accent-brand cursor-pointer flex-shrink-0"
+                  className="mt-0.5 w-4 h-4 rounded accent-brand cursor-pointer shrink-0"
                 />
                 <label
                   htmlFor="newsletterConsent"
@@ -145,7 +145,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-5 group">
-              <div className="relative w-9 h-9 flex-shrink-0">
+              <div className="relative w-9 h-9 shrink-0">
                 <Image
                   src="/logos/Finesse%20Plans%20Logo/finesse-3.png"
                   alt="Finesse Plans"
@@ -202,7 +202,7 @@ export default function Footer() {
                       href={link.href}
                       className={`text-sm transition-colors duration-200 flex items-center gap-2 group ${active ? "text-white" : "text-white/55 hover:text-white"}`}
                     >
-                      <span className={`w-1 h-1 rounded-full transition-colors duration-200 flex-shrink-0 ${active ? "bg-brand" : "bg-brand/50 group-hover:bg-brand"}`} />
+                      <span className={`w-1 h-1 rounded-full transition-colors duration-200 shrink-0 ${active ? "bg-brand" : "bg-brand/50 group-hover:bg-brand"}`} />
                       {link.label}
                     </Link>
                   </li>
@@ -223,7 +223,7 @@ export default function Footer() {
                   className="flex items-center gap-3 text-white/55 hover:text-white text-sm transition-colors duration-200 group"
                 >
                   <svg
-                    className="w-4 h-4 text-brand flex-shrink-0"
+                    className="w-4 h-4 text-brand shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -245,7 +245,7 @@ export default function Footer() {
                   className="flex items-center gap-3 text-white/55 hover:text-white text-sm transition-colors duration-200"
                 >
                   <svg
-                    className="w-4 h-4 text-brand flex-shrink-0"
+                    className="w-4 h-4 text-brand shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -285,7 +285,7 @@ export default function Footer() {
                       href={link.href}
                       className={`text-sm transition-colors duration-200 flex items-center gap-2 group ${active ? "text-white" : "text-white/55 hover:text-white"}`}
                     >
-                      <span className={`w-1 h-1 rounded-full transition-colors duration-200 flex-shrink-0 ${active ? "bg-brand" : "bg-brand/50 group-hover:bg-brand"}`} />
+                      <span className={`w-1 h-1 rounded-full transition-colors duration-200 shrink-0 ${active ? "bg-brand" : "bg-brand/50 group-hover:bg-brand"}`} />
                       {link.label}
                     </Link>
                   </li>

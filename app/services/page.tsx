@@ -97,7 +97,7 @@ export default function ServicesPage() {
                 key={service.slug}
                 className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col"
               >
-                <div className="w-12 h-12 bg-blue-pale rounded-xl flex items-center justify-center flex-shrink-0 mb-4 text-brand group-hover:bg-brand group-hover:text-white transition-all duration-300">
+                <div className="w-12 h-12 bg-blue-pale rounded-xl flex items-center justify-center shrink-0 mb-4 text-brand group-hover:bg-brand group-hover:text-white transition-all duration-300">
                   {iconMap[service.iconType] ?? iconMap["shield"]}
                 </div>
                 <h2

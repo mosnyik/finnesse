@@ -51,8 +51,8 @@ export default function EventsPage() {
               >
                 <div className="flex flex-col md:flex-row md:items-start gap-6">
                   {/* Date Block */}
-                  <div className="flex-shrink-0">
-                    <div className="bg-navy rounded-2xl p-5 text-center min-w-[90px]">
+                  <div className="shrink-0">
+                    <div className="bg-navy rounded-2xl p-5 text-center min-w-22.5">
                       <p className="text-brand-light text-xs font-semibold uppercase tracking-widest mb-1">
                         {new Date(event.dateISO).toLocaleDateString("en-US", { month: "short" })}
                       </p>
@@ -75,13 +75,13 @@ export default function EventsPage() {
                     </h2>
                     <div className="flex flex-wrap gap-4 mb-4">
                       <div className="flex items-center gap-2 text-gray-500 text-sm">
-                        <svg className="w-4 h-4 text-brand flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <svg className="w-4 h-4 text-brand shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         {event.time}
                       </div>
                       <div className="flex items-center gap-2 text-gray-500 text-sm">
-                        <svg className="w-4 h-4 text-brand flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <svg className="w-4 h-4 text-brand shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         </svg>
                         {event.location}
