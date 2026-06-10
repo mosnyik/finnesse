@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { EMAIL } from "../lib/data";
 
 export const metadata: Metadata = {
@@ -9,8 +10,20 @@ export const metadata: Metadata = {
 export default function TermsOfUsePage() {
   return (
     <div className="pt-20">
-      <section className="bg-navy py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 overflow-hidden">
+        <Image
+          src="/images/hero-legal.jpg"
+          alt=""
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-navy/85" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-brand-light uppercase tracking-widest text-xs font-semibold mb-4">
+            Legal
+          </p>
           <h1
             className="text-3xl md:text-4xl font-bold text-white mb-3"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
