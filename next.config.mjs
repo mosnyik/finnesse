@@ -9,7 +9,12 @@ const nextConfig = {
     root: __dirname,
   },
   images: {
-    unoptimized: false,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
   },
 };
 

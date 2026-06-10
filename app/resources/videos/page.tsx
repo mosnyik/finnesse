@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { videoItems, DISCOVERY_CALL_URL } from "../../lib/data";
 
 export const metadata: Metadata = {
@@ -11,8 +12,17 @@ export const metadata: Metadata = {
 export default function VideosPage() {
   return (
     <div className="pt-20">
-      <section className="bg-gradient-to-br from-navy-dark via-navy to-navy-light py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-24 overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1920&q=80"
+          alt=""
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-navy/80" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-brand-light uppercase tracking-widest text-xs font-semibold mb-4">
             Resources
           </p>

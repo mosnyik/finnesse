@@ -62,20 +62,20 @@ export default function HomePage() {
         className="relative min-h-screen flex items-center overflow-hidden"
         aria-label="Hero"
       >
-        <div className="absolute inset-0 bg-linear-to-br from-navy-dark via-navy to-navy-light">
-          <div className="absolute top-1/3 right-0 w-175 h-175 rounded-full bg-brand/6 translate-x-1/3 -translate-y-1/2 pointer-events-none" />
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-brand-light/5 translate-y-1/2 pointer-events-none" />
-          <div
-            className="absolute inset-0 opacity-4 pointer-events-none"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)",
-              backgroundSize: "64px 64px",
-            }}
-          />
+        <Image
+          src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1920&q=80"
+          alt=""
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-navy/82">
+          <div className="absolute top-1/3 right-0 w-175 h-175 rounded-full bg-brand/8 translate-x-1/3 -translate-y-1/2 pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-brand-light/6 translate-y-1/2 pointer-events-none" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 w-full">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="inline-flex items-center gap-2 bg-brand/15 border border-brand/20 rounded-full px-4 py-1.5 mb-8">
