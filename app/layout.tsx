@@ -19,11 +19,35 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://finesseplans.com"),
   title: "Finesse Plans | Building Complete Financial Protection for Families",
   description:
     "At Finesse Plans, we help families secure their future through personalized strategies focused on income protection, retirement planning, and legacy preservation.",
   keywords:
     "financial planning, income protection, retirement planning, legacy preservation, life insurance, mortgage protection, family financial security",
+  openGraph: {
+    type: "website",
+    siteName: "Finesse Plans",
+    title: "Finesse Plans | Building Complete Financial Protection for Families",
+    description:
+      "At Finesse Plans, we help families secure their future through personalized strategies focused on income protection, retirement planning, and legacy preservation.",
+    url: "https://finesseplans.com",
+    images: [
+      {
+        url: "/images/hero-home.jpg",
+        width: 1920,
+        height: 1080,
+        alt: "Finesse Plans — Building Complete Financial Protection for Families",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Finesse Plans | Building Complete Financial Protection for Families",
+    description:
+      "At Finesse Plans, we help families secure their future through personalized strategies focused on income protection, retirement planning, and legacy preservation.",
+    images: ["/images/hero-home.jpg"],
+  },
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
