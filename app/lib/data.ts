@@ -283,6 +283,7 @@ export const blogPosts = [
     readTime: "5 min read",
     category: "Income Protection",
     href: "/resources/blog",
+    image: "/images/blog-income-protection.jpg",
   },
   {
     id: "2",
@@ -293,6 +294,7 @@ export const blogPosts = [
     readTime: "6 min read",
     category: "Financial Planning",
     href: "/resources/blog",
+    image: "/images/blog-financial-planning.jpg",
   },
   {
     id: "3",
@@ -303,6 +305,7 @@ export const blogPosts = [
     readTime: "7 min read",
     category: "Retirement",
     href: "/resources/blog",
+    image: "/images/blog-retirement.jpg",
   },
 ];
 
@@ -314,6 +317,7 @@ export const videoItems = [
       "A comprehensive overview of how families can protect their income, assets, and loved ones from unexpected life events.",
     duration: "12 min",
     topic: "Family Protection",
+    thumbnail: "/images/video-family-protection.jpg",
   },
   {
     id: "2",
@@ -322,6 +326,7 @@ export const videoItems = [
       "Explore practical strategies for building a reliable retirement income that supports your lifestyle throughout your golden years.",
     duration: "18 min",
     topic: "Retirement Planning",
+    thumbnail: "/images/video-retirement.jpg",
   },
   {
     id: "3",
@@ -330,6 +335,7 @@ export const videoItems = [
       "Demystifying estate planning — what it is, why it matters, and how to get started protecting your family's legacy.",
     duration: "15 min",
     topic: "Estate Planning",
+    thumbnail: "/images/video-estate-planning.jpg",
   },
   {
     id: "4",
@@ -338,6 +344,7 @@ export const videoItems = [
       "An honest look at long-term care costs, planning strategies, and how to protect your assets while preserving your independence.",
     duration: "14 min",
     topic: "Long-Term Care",
+    thumbnail: "/images/video-long-term-care.jpg",
   },
 ];
 

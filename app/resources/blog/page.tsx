@@ -20,6 +20,7 @@ const allPosts = [
     readTime: "4 min read",
     category: "Life Insurance",
     href: "/resources/blog",
+    image: "/images/blog-life-insurance.jpg",
   },
   {
     id: "5",
@@ -30,6 +31,7 @@ const allPosts = [
     readTime: "5 min read",
     category: "Family Finance",
     href: "/resources/blog",
+    image: "/images/blog-family-talk.jpg",
   },
   {
     id: "6",
@@ -40,6 +42,7 @@ const allPosts = [
     readTime: "6 min read",
     category: "Long-Term Care",
     href: "/resources/blog",
+    image: "/images/blog-long-term-care.jpg",
   },
 ];
 
@@ -80,10 +83,14 @@ export default function BlogPage() {
           <div className="mb-12">
             <article className="bg-blue-pale rounded-3xl overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="grid md:grid-cols-2">
-                <div className="h-64 md:h-auto bg-gradient-to-br from-navy/10 to-brand/10 flex items-center justify-center">
-                  <svg className="w-16 h-16 text-navy/15" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.75} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
+                <div className="h-64 md:h-auto relative overflow-hidden">
+                  <Image
+                    src={allPosts[0].image ?? "/images/blog-financial-planning.jpg"}
+                    alt={allPosts[0].title}
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
                 <div className="p-8 md:p-10 flex flex-col justify-center">
                   <span className="inline-block text-xs bg-brand/10 text-brand font-semibold px-3 py-1 rounded-full mb-4 w-fit">
@@ -120,10 +127,14 @@ export default function BlogPage() {
                 key={post.id}
                 className="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col"
               >
-                <div className="h-44 bg-gradient-to-br from-blue-pale to-blue-light flex items-center justify-center flex-shrink-0">
-                  <svg className="w-10 h-10 text-navy/15" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
+                <div className="h-44 relative overflow-hidden flex-shrink-0">
+                  <Image
+                    src={post.image ?? "/images/blog-financial-planning.jpg"}
+                    alt={post.title}
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-3">

@@ -85,18 +85,14 @@ export default function AboutPage() {
                 </svg>
               </Link>
             </div>
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-blue-pale to-blue-light flex items-center justify-center">
-              <div className="text-center p-12 opacity-40">
-                <div className="relative w-20 h-20 mx-auto mb-4">
-                  <Image
-                    src="/logos/Finesse%20Plans%20Logo/finesse-3.png"
-                    alt=""
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <p className="text-gray-400 text-xs">Add a team or family photo</p>
-              </div>
+            <div className="aspect-[4/3] rounded-3xl overflow-hidden relative">
+              <Image
+                src="/images/card-team-advisor.jpg"
+                alt="Professional financial advisor meeting with clients"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>

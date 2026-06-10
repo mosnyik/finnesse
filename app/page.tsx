@@ -130,20 +130,15 @@ export default function HomePage() {
 
             <div className="hidden lg:block">
               <div className="relative">
-                <div className="w-full aspect-4/3 rounded-3xl overflow-hidden bg-linear-to-br from-navy-light/80 via-brand/15 to-brand/8 flex items-center justify-center border border-white/10 shadow-2xl">
-                  <div className="text-center p-12 opacity-50">
-                    <div className="relative w-20 h-20 mx-auto mb-4">
-                      <Image
-                        src="/logos/Finesse%20Plans%20Logo/finesse-3.png"
-                        alt=""
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-white/40 text-xs">
-                      Add your family lifestyle photo here
-                    </p>
-                  </div>
+                <div className="w-full aspect-4/3 rounded-3xl overflow-hidden shadow-2xl relative">
+                  <Image
+                    src="/images/card-family-lifestyle.jpg"
+                    alt="Happy family protected by Finesse Plans"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority
+                  />
                 </div>
                 <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl px-5 py-4 shadow-xl">
                   <p className="text-xs text-gray-400 mb-0.5">As a fiduciary</p>
@@ -200,10 +195,14 @@ export default function HomePage() {
                   .
                 </p>
               </div>
-              <div className="aspect-video rounded-2xl overflow-hidden bg-linear-to-br from-blue-pale to-blue-light flex items-center justify-center">
-                <p className="text-gray-300 text-xs text-center px-4">
-                  Add a family photo here
-                </p>
+              <div className="aspect-video rounded-2xl overflow-hidden relative">
+                <Image
+                  src="/images/card-about-section.jpg"
+                  alt="Family working together on financial plans"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
@@ -553,10 +552,14 @@ export default function HomePage() {
                   key={post.id}
                   className="bg-blue-pale rounded-2xl overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-300 group"
                 >
-                  <div className="h-44 bg-linear-to-br from-navy/8 to-brand/8 flex items-center justify-center">
-                    <svg className="w-10 h-10 text-navy/15" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
+                  <div className="h-44 relative overflow-hidden">
+                    <Image
+                      src={post.image ?? "/images/blog-financial-planning.jpg"}
+                      alt={post.title}
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">

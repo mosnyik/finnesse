@@ -49,11 +49,21 @@ export default function VideosPage() {
                 className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group"
               >
                 {/* Thumbnail */}
-                <div className="relative h-52 bg-gradient-to-br from-navy to-navy-light flex items-center justify-center cursor-pointer group/play">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center group-hover/play:bg-brand transition-colors duration-300 border-2 border-white/30">
-                    <svg className="w-7 h-7 text-white translate-x-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
+                <div className="relative h-52 overflow-hidden cursor-pointer group/play">
+                  <Image
+                    src={video.thumbnail ?? "/images/hero-videos.jpg"}
+                    alt={video.title}
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-navy/40 group-hover:bg-navy/30 transition-colors duration-300" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center group-hover/play:bg-brand transition-colors duration-300 border-2 border-white/30">
+                      <svg className="w-7 h-7 text-white translate-x-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
                   </div>
                   <div className="absolute bottom-4 right-4 bg-black/50 text-white text-xs font-semibold px-2.5 py-1 rounded-lg">
                     {video.duration}
