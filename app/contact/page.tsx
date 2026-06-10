@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-navy-dark via-navy to-navy-light py-24">
+      <section className="bg-linear-to-br from-navy-dark via-navy to-navy-light py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-brand-light uppercase tracking-widest text-xs font-semibold mb-4">
             Get in Touch
@@ -62,7 +62,7 @@ export default function ContactPage() {
                     href={PHONE_HREF}
                     className="flex items-center gap-4 p-5 bg-blue-pale rounded-2xl hover:bg-blue-light transition-colors duration-200 cursor-pointer group"
                   >
-                    <div className="w-12 h-12 bg-brand rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-brand rounded-xl flex items-center justify-center shrink-0">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                     href={`mailto:${EMAIL}`}
                     className="flex items-center gap-4 p-5 bg-blue-pale rounded-2xl hover:bg-blue-light transition-colors duration-200 cursor-pointer group"
                   >
-                    <div className="w-12 h-12 bg-brand rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-brand rounded-xl flex items-center justify-center shrink-0">
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
@@ -105,7 +105,7 @@ export default function ContactPage() {
                     { step: "04", text: "Clear next steps if you decide Finesse Plans is the right fit" },
                   ].map((item) => (
                     <li key={item.step} className="flex items-start gap-3">
-                      <span className="text-brand-light font-bold text-xs flex-shrink-0 w-6">{item.step}</span>
+                      <span className="text-brand-light font-bold text-xs shrink-0 w-6">{item.step}</span>
                       <p className="text-white/70 text-sm leading-relaxed">{item.text}</p>
                     </li>
                   ))}

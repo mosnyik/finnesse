@@ -62,8 +62,8 @@ export default function HomePage() {
         className="relative min-h-screen flex items-center overflow-hidden"
         aria-label="Hero"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-dark via-navy to-navy-light">
-          <div className="absolute top-1/3 right-0 w-[700px] h-[700px] rounded-full bg-brand/6 translate-x-1/3 -translate-y-1/2 pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-br from-navy-dark via-navy to-navy-light">
+          <div className="absolute top-1/3 right-0 w-175 h-175 rounded-full bg-brand/6 translate-x-1/3 -translate-y-1/2 pointer-events-none" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-brand-light/5 translate-y-1/2 pointer-events-none" />
           <div
             className="absolute inset-0 opacity-4 pointer-events-none"
@@ -118,7 +118,7 @@ export default function HomePage() {
                 {["Fiduciary Advisors", "Family-Focused", "Personalized Strategies"].map(
                   (label) => (
                     <div key={label} className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-brand-light flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <svg className="w-4 h-4 text-brand-light shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       <span className="text-white/70 text-sm">{label}</span>
@@ -130,7 +130,7 @@ export default function HomePage() {
 
             <div className="hidden lg:block">
               <div className="relative">
-                <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-navy-light/80 via-brand/15 to-brand/8 flex items-center justify-center border border-white/10 shadow-2xl">
+                <div className="w-full aspect-4/3 rounded-3xl overflow-hidden bg-linear-to-br from-navy-light/80 via-brand/15 to-brand/8 flex items-center justify-center border border-white/10 shadow-2xl">
                   <div className="text-center p-12 opacity-50">
                     <div className="relative w-20 h-20 mx-auto mb-4">
                       <Image
@@ -200,7 +200,7 @@ export default function HomePage() {
                   .
                 </p>
               </div>
-              <div className="aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-blue-pale to-blue-light flex items-center justify-center">
+              <div className="aspect-video rounded-2xl overflow-hidden bg-linear-to-br from-blue-pale to-blue-light flex items-center justify-center">
                 <p className="text-gray-300 text-xs text-center px-4">
                   Add a family photo here
                 </p>
@@ -286,7 +286,7 @@ export default function HomePage() {
                 key={service.slug}
                 className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col"
               >
-                <div className="w-12 h-12 bg-blue-pale rounded-xl flex items-center justify-center flex-shrink-0 mb-4 group-hover:bg-brand/10 transition-colors duration-300">
+                <div className="w-12 h-12 bg-blue-pale rounded-xl flex items-center justify-center shrink-0 mb-4 group-hover:bg-brand/10 transition-colors duration-300">
                   <ServiceIcon type={service.iconType} />
                 </div>
                 <h3
@@ -330,7 +330,7 @@ export default function HomePage() {
 
       {/* ── CTA BANNER ── */}
       <section className="relative py-28 overflow-hidden" aria-label="Call to action">
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy to-navy-light">
+        <div className="absolute inset-0 bg-linear-to-r from-navy-dark via-navy to-navy-light">
           <div
             className="absolute inset-0 opacity-5 pointer-events-none"
             style={{
@@ -339,7 +339,7 @@ export default function HomePage() {
               backgroundSize: "32px 32px",
             }}
           />
-          <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-brand/10 to-transparent pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-linear-to-l from-brand/10 to-transparent pointer-events-none" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-brand-light uppercase tracking-widest text-xs font-semibold mb-5">
@@ -401,7 +401,7 @@ export default function HomePage() {
                 className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col"
               >
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="bg-brand/10 rounded-xl p-2.5 flex-shrink-0">
+                  <div className="bg-brand/10 rounded-xl p-2.5 shrink-0">
                     <svg className="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
@@ -418,7 +418,7 @@ export default function HomePage() {
                   {event.title}
                 </h3>
                 <p className="text-gray-400 text-xs mb-3 flex items-center gap-1">
-                  <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   </svg>
                   {event.location}
@@ -513,7 +513,7 @@ export default function HomePage() {
                 <ul className="space-y-1.5 mb-5">
                   {cat.items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-gray-500 text-xs">
-                      <span className="w-1 h-1 bg-brand rounded-full flex-shrink-0" />
+                      <span className="w-1 h-1 bg-brand rounded-full shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -553,7 +553,7 @@ export default function HomePage() {
                   key={post.id}
                   className="bg-blue-pale rounded-2xl overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-300 group"
                 >
-                  <div className="h-44 bg-gradient-to-br from-navy/8 to-brand/8 flex items-center justify-center">
+                  <div className="h-44 bg-linear-to-br from-navy/8 to-brand/8 flex items-center justify-center">
                     <svg className="w-10 h-10 text-navy/15" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
