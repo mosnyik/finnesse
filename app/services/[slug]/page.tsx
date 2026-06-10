@@ -41,7 +41,7 @@ export default async function ServicePage({
       {/* Hero */}
       <section className="relative py-20 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1920&q=80"
+          src="/images/hero-service.jpg"
           alt=""
           fill
           className="object-cover object-center"

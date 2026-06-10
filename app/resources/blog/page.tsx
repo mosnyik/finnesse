@@ -49,7 +49,7 @@ export default function BlogPage() {
       {/* Hero */}
       <section className="relative py-24 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1920&q=80"
+          src="/images/hero-blog.jpg"
           alt=""
           fill
           className="object-cover object-center"

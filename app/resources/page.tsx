@@ -13,7 +13,7 @@ export default function ResourcesPage() {
     <div className="pt-20">
       <section className="relative py-24 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1920&q=80"
+          src="/images/hero-resources.jpg"
           alt=""
           fill
           className="object-cover object-center"

@@ -63,7 +63,7 @@ export default function HomePage() {
         aria-label="Hero"
       >
         <Image
-          src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1920&q=80"
+          src="/images/hero-home.jpg"
           alt=""
           fill
           className="object-cover object-center"

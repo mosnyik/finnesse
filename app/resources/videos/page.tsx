@@ -14,7 +14,7 @@ export default function VideosPage() {
     <div className="pt-20">
       <section className="relative py-24 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1920&q=80"
+          src="/images/hero-videos.jpg"
           alt=""
           fill
           className="object-cover object-center"

@@ -63,7 +63,7 @@ export default function ServicesPage() {
       {/* Hero */}
       <section className="relative py-24 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1920&q=80"
+          src="/images/hero-services.jpg"
           alt=""
           fill
           className="object-cover object-center"

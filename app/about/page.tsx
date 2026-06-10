@@ -16,7 +16,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative py-24 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=1920&q=80"
+          src="/images/hero-about.jpg"
           alt=""
           fill
           className="object-cover object-center"

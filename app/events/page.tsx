@@ -15,7 +15,7 @@ export default function EventsPage() {
       {/* Hero */}
       <section className="relative py-24 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1920&q=80"
+          src="/images/hero-events.jpg"
           alt=""
           fill
           className="object-cover object-center"
