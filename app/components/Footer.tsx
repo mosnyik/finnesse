@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { EMAIL, PHONE_HREF, PHONE_NUMBER } from "../lib/data";
 
 const socialLinks = [
@@ -53,6 +54,8 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+
   return (
     <footer className="bg-navy-dark">
       {/* Newsletter */}
@@ -191,17 +194,20 @@ export default function Footer() {
                 { label: "Our Services", href: "/services" },
                 { label: "Events", href: "/events" },
                 { label: "Contact Us", href: "/contact" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/55 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2 group"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-brand/50 group-hover:bg-brand transition-colors duration-200 flex-shrink-0" />
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              ].map((link) => {
+                const active = link.href === "/" ? pathname === "/" : pathname === link.href || pathname.startsWith(link.href + "/");
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={`text-sm transition-colors duration-200 flex items-center gap-2 group ${active ? "text-white" : "text-white/55 hover:text-white"}`}
+                    >
+                      <span className={`w-1 h-1 rounded-full transition-colors duration-200 flex-shrink-0 ${active ? "bg-brand" : "bg-brand/50 group-hover:bg-brand"}`} />
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -271,17 +277,20 @@ export default function Footer() {
                 { label: "Privacy Policy", href: "/privacy-policy" },
                 { label: "Disclosure", href: "/disclosure" },
                 { label: "Terms of Use", href: "/terms-of-use" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/55 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2 group"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-brand/50 group-hover:bg-brand transition-colors duration-200 flex-shrink-0" />
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              ].map((link) => {
+                const active = pathname === link.href;
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={`text-sm transition-colors duration-200 flex items-center gap-2 group ${active ? "text-white" : "text-white/55 hover:text-white"}`}
+                    >
+                      <span className={`w-1 h-1 rounded-full transition-colors duration-200 flex-shrink-0 ${active ? "bg-brand" : "bg-brand/50 group-hover:bg-brand"}`} />
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
@@ -302,7 +311,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white/30 hover:text-white/60 text-xs transition-colors duration-200"
+                className={`text-xs transition-colors duration-200 ${pathname === link.href ? "text-white/60" : "text-white/30 hover:text-white/60"}`}
               >
                 {link.label}
               </Link>

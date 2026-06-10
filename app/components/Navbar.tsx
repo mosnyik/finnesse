@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { PHONE_HREF, PHONE_NUMBER } from "../lib/data";
 
 const navItems = [
@@ -28,6 +29,12 @@ export default function Navbar() {
   const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const resourcesRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(href + "/");
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -104,7 +111,7 @@ export default function Navbar() {
                   onMouseLeave={() => setIsResourcesOpen(false)}
                 >
                   <button
-                    className="flex items-center gap-1 px-4 py-2 text-white/85 hover:text-white text-sm font-medium transition-colors duration-200 cursor-pointer rounded-md hover:bg-white/5"
+                    className={`flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer rounded-md ${isActive("/resources") ? "text-brand-light bg-white/10" : "text-white/85 hover:text-white hover:bg-white/5"}`}
                     onClick={() => setIsResourcesOpen((v) => !v)}
                     aria-expanded={isResourcesOpen}
                     aria-haspopup="true"
@@ -131,7 +138,7 @@ export default function Navbar() {
                         <Link
                           key={sub.href}
                           href={sub.href}
-                          className="flex items-center gap-2 px-4 py-2.5 text-navy text-sm hover:bg-blue-pale hover:text-brand transition-colors duration-150"
+                          className={`flex items-center gap-2 px-4 py-2.5 text-sm transition-colors duration-150 ${pathname === sub.href ? "bg-blue-pale text-brand font-semibold" : "text-navy hover:bg-blue-pale hover:text-brand"}`}
                           onClick={() => setIsResourcesOpen(false)}
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-brand-light flex-shrink-0" />
@@ -145,7 +152,7 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="px-4 py-2 text-white/85 hover:text-white text-sm font-medium transition-colors duration-200 rounded-md hover:bg-white/5"
+                  className={`px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-md ${isActive(item.href) ? "text-brand-light bg-white/10" : "text-white/85 hover:text-white hover:bg-white/5"}`}
                 >
                   {item.label}
                 </Link>
@@ -223,7 +230,7 @@ export default function Navbar() {
               item.dropdown ? (
                 <div key={item.label}>
                   <button
-                    className="flex items-center justify-between w-full px-4 py-4 text-white/90 hover:text-white font-medium cursor-pointer rounded-xl hover:bg-white/5 transition-colors duration-200 text-left min-h-[44px]"
+                    className={`flex items-center justify-between w-full px-4 py-4 font-medium cursor-pointer rounded-xl transition-colors duration-200 text-left min-h-[44px] ${isActive("/resources") ? "text-brand-light bg-white/10 border-l-2 border-brand" : "text-white/90 hover:text-white hover:bg-white/5"}`}
                     onClick={() =>
                       setIsMobileResourcesOpen((v) => !v)
                     }
@@ -251,7 +258,7 @@ export default function Navbar() {
                         <Link
                           key={sub.href}
                           href={sub.href}
-                          className="block px-4 py-3 text-white/70 hover:text-white text-sm rounded-lg hover:bg-white/5 transition-colors duration-200 min-h-[44px] flex items-center"
+                          className={`block px-4 py-3 text-sm rounded-lg transition-colors duration-200 min-h-[44px] flex items-center ${pathname === sub.href ? "text-white font-medium bg-white/8" : "text-white/70 hover:text-white hover:bg-white/5"}`}
                           onClick={() => {
                             setIsMenuOpen(false);
                             setIsMobileResourcesOpen(false);
@@ -267,7 +274,7 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block px-4 py-4 text-white/90 hover:text-white font-medium rounded-xl hover:bg-white/5 transition-colors duration-200 min-h-[44px] flex items-center"
+                  className={`block px-4 py-4 font-medium rounded-xl transition-colors duration-200 min-h-[44px] flex items-center ${isActive(item.href) ? "text-white bg-white/10 border-l-2 border-brand" : "text-white/90 hover:text-white hover:bg-white/5"}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
