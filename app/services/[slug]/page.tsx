@@ -132,14 +132,14 @@ export default async function ServicePage({
                   Ready to Get Started?
                 </h3>
                 <p className="text-white/70 text-sm leading-relaxed mb-6">
-                  Schedule a discovery call to discuss how this planning strategy
-                  can work for your family.
+                  Let us help you find the right strategies for your specific
+                  needs and goals.
                 </p>
                 <Link
-                  href={service.ctaUrl}
+                  href="/contact"
                   className="flex items-center justify-center gap-2 w-full py-3.5 bg-brand hover:bg-brand-dark text-white font-semibold rounded-xl transition-colors duration-200 cursor-pointer mb-4"
                 >
-                  {service.ctaText}
+                  See Your Options
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -166,31 +166,6 @@ export default async function ServicePage({
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Service CTA Banner */}
-      <section className="py-16 bg-linear-to-r from-brand to-brand-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2
-            className="text-3xl font-bold text-white mb-4"
-            style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-          >
-            Let&apos;s Build Your Plan Together
-          </h2>
-          <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Every family&apos;s situation is unique. Let us help you find the right
-            strategies for your specific goals and circumstances.
-          </p>
-          <Link
-            href={service.ctaUrl}
-            className="inline-flex items-center gap-2 px-10 py-4 bg-white text-brand hover:text-brand-dark font-bold rounded-full text-base transition-all duration-300 shadow-lg hover:-translate-y-0.5 cursor-pointer"
-          >
-            {service.ctaText}
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
         </div>
       </section>
 
