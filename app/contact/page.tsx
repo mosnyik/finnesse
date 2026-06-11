@@ -49,11 +49,11 @@ export default function ContactPage() {
                 className="text-2xl font-bold text-navy mb-2"
                 style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
               >
-                Schedule a Discovery Call
+                Explore Your Options
               </h2>
               <p className="text-gray-600 mb-8 text-sm leading-relaxed">
-                Fill out the form below and we&apos;ll reach out to schedule a
-                complimentary discovery call at a time that works for you.
+                Complete the form below and a member of our team will reach out
+                to discuss the available planning options.
               </p>
               <ContactForm />
             </div>

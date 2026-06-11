@@ -73,6 +73,7 @@ export default function ContactForm() {
           <option>Financial Security for Women</option>
           <option>Financial Protection for Minors</option>
           <option>Trust &amp; Special Needs Planning</option>
+          <option>Business Continuity &amp; Succession Planning</option>
           <option>Employee Benefits Planning</option>
           <option>General Inquiry</option>
         </select>
@@ -103,7 +104,7 @@ export default function ContactForm() {
         type="submit"
         className="w-full py-4 bg-brand hover:bg-brand-dark text-white font-bold rounded-xl transition-colors duration-200 cursor-pointer text-base shadow-md hover:shadow-lg"
       >
-        Schedule My Discovery Call
+        Submit
       </button>
     </form>
   );

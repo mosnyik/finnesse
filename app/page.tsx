@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { services, events, blogPosts, DISCOVERY_CALL_URL } from "./lib/data";
 
-function ServiceIcon({ type }: { type: string }) {
-  const cls = "w-7 h-7 text-brand";
+function ServiceIcon({ type, className }: { type: string; className?: string }) {
+  const cls = className ?? "w-7 h-7";
   const icons: Record<string, React.ReactNode> = {
     shield: (
       <svg
@@ -133,6 +133,22 @@ function ServiceIcon({ type }: { type: string }) {
         />
       </svg>
     ),
+    briefcase: (
+      <svg
+        className={cls}
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+        />
+      </svg>
+    ),
     office: (
       <svg
         className={cls}
@@ -193,7 +209,7 @@ export default function HomePage() {
               </h1>
               <p className="text-white/70 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
                 Personalized strategies focused on income protection, retirement
-                planning, and legacy preservation — so your family is always
+                planning, and legacy preservation so your family is always
                 protected.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -224,28 +240,34 @@ export default function HomePage() {
                   Explore Services
                 </Link>
               </div>
-              <div className="mt-12 flex flex-wrap gap-8">
-                {[
-                  "Fiduciary Advisors",
-                  "Family-Focused",
-                  "Personalized Strategies",
-                ].map((label) => (
-                  <div key={label} className="flex items-center gap-2">
-                    <svg
-                      className="w-4 h-4 text-brand-light shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-white/70 text-sm">{label}</span>
-                  </div>
-                ))}
+              <div className="mt-10">
+                <p className="text-white/60 text-xs font-semibold uppercase tracking-widest mb-4">
+                  What to expect on your Discovery Call
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    "We will explore your current situation and what's been holding you back",
+                    "We will get clear on what you actually want, not just what seems possible",
+                    "We will share how we work and whether we are the right fit to support you",
+                    "You'll leave with clarity, regardless of whether we work together",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <svg
+                        className="w-4 h-4 text-brand-light shrink-0 mt-0.5"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span className="text-white/70 text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
@@ -344,7 +366,7 @@ export default function HomePage() {
               },
               {
                 title: "Preserve",
-                desc: "Estate and legacy planning strategies designed to help protect your wealth and ensure it is passed on according to your wishes.",
+                desc: "Estate and legacy planning strategies designed to help protect your wealth and help ensure it is passed on according to your wishes.",
                 bg: "bg-navy-light",
               },
             ].map((p) => (
@@ -430,12 +452,13 @@ export default function HomePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
-              <article
+              <Link
                 key={service.slug}
-                className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col"
+                href={`/services/${service.slug}`}
+                className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col block cursor-pointer"
               >
-                <div className="w-12 h-12 bg-blue-pale rounded-xl flex items-center justify-center shrink-0 mb-4 group-hover:bg-brand/10 transition-colors duration-300">
-                  <ServiceIcon type={service.iconType} />
+                <div className="w-12 h-12 bg-blue-pale rounded-xl flex items-center justify-center shrink-0 mb-4 text-brand group-hover:bg-brand group-hover:text-white transition-all duration-300">
+                  <ServiceIcon type={service.iconType} className="w-7 h-7" />
                 </div>
                 <h3
                   className="font-bold text-navy text-lg mb-3 leading-snug"
@@ -446,13 +469,10 @@ export default function HomePage() {
                 <p className="text-gray-600 text-sm leading-relaxed mb-5 flex-1">
                   {service.shortDescription}
                 </p>
-                <Link
-                  href={`/services/${service.slug}`}
-                  className="inline-flex items-center gap-1.5 text-brand hover:text-brand-dark font-semibold text-sm transition-colors duration-200 cursor-pointer group/link mt-auto"
-                >
+                <span className="inline-flex items-center gap-1 text-brand font-semibold text-sm group-hover:gap-2 transition-all duration-200 mt-auto">
                   Learn More
                   <svg
-                    className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform duration-200"
+                    className="w-4 h-4"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -465,8 +485,8 @@ export default function HomePage() {
                       d="M17 8l4 4m0 0l-4 4m4-4H3"
                     />
                   </svg>
-                </Link>
-              </article>
+                </span>
+              </Link>
             ))}
           </div>
 
@@ -486,17 +506,14 @@ export default function HomePage() {
         className="relative py-28 overflow-hidden"
         aria-label="Call to action"
       >
-        <div className="absolute inset-0 bg-linear-to-r from-navy-dark via-navy to-navy-light">
-          <div
-            className="absolute inset-0 opacity-5 pointer-events-none"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
-              backgroundSize: "32px 32px",
-            }}
-          />
-          <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-linear-to-l from-brand/10 to-transparent pointer-events-none" />
-        </div>
+        <Image
+          src="/images/card-family-life.jpg"
+          alt=""
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-navy/85" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-brand-light uppercase tracking-widest text-xs font-semibold mb-5">
             Take the First Step
@@ -572,16 +589,17 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {events.map((event) => (
-              <article
+              <Link
                 key={event.id}
-                className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                href={event.registerUrl}
+                className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group flex flex-col block cursor-pointer"
               >
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="bg-brand/10 rounded-xl p-2.5 shrink-0">
+                  <div className="bg-brand/10 rounded-xl p-2.5 shrink-0 text-brand group-hover:bg-brand group-hover:text-white transition-all duration-300">
                     <svg
-                      className="w-5 h-5 text-brand"
+                      className="w-5 h-5"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -628,13 +646,10 @@ export default function HomePage() {
                 <p className="text-gray-600 text-sm leading-relaxed mb-5 flex-1">
                   {event.description}
                 </p>
-                <Link
-                  href={event.registerUrl}
-                  className="inline-flex items-center justify-center py-2.5 px-4 bg-navy hover:bg-navy-dark text-white text-sm font-semibold rounded-xl transition-colors duration-200 cursor-pointer mt-auto"
-                >
+                <span className="inline-flex items-center justify-center py-2.5 px-4 bg-navy group-hover:bg-brand text-white text-sm font-semibold rounded-xl transition-colors duration-200 mt-auto">
                   Register Now
-                </Link>
-              </article>
+                </span>
+              </Link>
             ))}
           </div>
         </div>

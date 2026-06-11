@@ -1,6 +1,7 @@
-export const DISCOVERY_CALL_URL = "/contact";
-export const PHONE_NUMBER = "+1 (404) 786-9467";
-export const PHONE_HREF = "tel:+14047869467";
+export const DISCOVERY_CALL_URL =
+  "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2AyjX13siHZZnNI1-fIxOG5q6gWVXEpwd2kgQ_rytk9cjSUpWWgUy5GaKP2FlugO6p-2rlpXr5?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleASWTTdleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafave154IWFfW1tcq4k4W4rQmpkPUDU7B5G8CZIyHKlpyecQuYKfOEYlBrrPA_aem_5vgb87ia1CYtU_qKCS9cJQ";
+export const PHONE_NUMBER = "+1(940) 245-3164";
+export const PHONE_HREF = "tel:+19402453164";
 export const EMAIL = "info@finesseplans.com";
 export const ADDRESS = "";
 
@@ -35,7 +36,7 @@ export const services: Service[] = [
     closing:
       "We believe financial protection should be based on a clear understanding of your family's needs and the future you are working to create.",
     ctaText: "See Your Options",
-    ctaUrl: "/contact",
+    ctaUrl: DISCOVERY_CALL_URL,
     iconType: "shield",
   },
   {
@@ -48,15 +49,15 @@ export const services: Service[] = [
     body: "But what would happen to that home if the income supporting it suddenly stopped?\n\nMortgage protection planning helps families prepare for life's unexpected events by creating strategies designed to help protect their home and maintain financial stability. The goal is to help ensure that loved ones are not faced with difficult financial decisions during an already challenging time.\n\nOur approach begins with understanding your family's unique situation, including your mortgage obligations, income sources, financial goals, and existing protection plans. From there, we help identify options that align with your needs and long-term objectives.",
     bulletPoints: [
       "Reduce the financial burden of mortgage payments on surviving family members",
-      "Help protect your family's ability to remain in their home",
+      "Protect your family's ability to remain in their home",
       "Provide financial support during unexpected life events",
       "Complement existing life insurance and financial protection strategies",
       "Create greater confidence that your family's housing needs can continue to be met",
     ],
     closing:
-      "Because protecting it is not just about protecting a property, it's about helping protect the people, memories, and future it represents.",
+      "Mortgage protection is not just about protecting a property, it's about helping protect the people, memories, and future it represents.",
     ctaText: "See Your Options",
-    ctaUrl: "/contact",
+    ctaUrl: DISCOVERY_CALL_URL,
     iconType: "home",
   },
   {
@@ -66,7 +67,7 @@ export const services: Service[] = [
       "Helping individuals and families prepare for future care needs while preserving the assets they've worked hard to build.",
     intro:
       "As people live longer, the likelihood of needing some form of extended care increases. Whether that care is provided at home, in an assisted living community, or in a nursing facility, the associated costs can place significant financial pressure on individuals and their families.",
-    body: "Long-term care planning helps you prepare for these possibilities before they become urgent decisions. The goal is to create a strategy that helps protect your assets, preserve your independence, and reduce the financial and emotional burden that unexpected care needs can place on loved ones.\n\nOur approach begins with understanding your current financial situation, family dynamics, healthcare concerns, and long-term goals. We then help you evaluate available options and determine which strategies may be appropriate for your circumstances.",
+    body: "Long-term care planning helps you prepare for these possibilities before they become urgent decisions. The goal is to create a personalized strategy that helps protect your assets, preserve your independence, and reduce the financial and emotional burden that unexpected care needs can place on loved ones.\n\nOur approach begins with understanding your current financial situation, family dynamics, healthcare concerns, and long-term goals. We then help you evaluate available options and determine which strategies may be appropriate for your circumstances.",
     bulletPoints: [
       "Prepare for future healthcare and caregiving expenses",
       "Help preserve retirement savings and other assets",
@@ -76,9 +77,9 @@ export const services: Service[] = [
       "Create confidence that a plan is in place for life's later stages",
     ],
     closing:
-      "Protecting your assets helps ensure that you and your loved ones have choices, support, and peace of mind when they matter most.",
+      "By planning ahead, families can make informed decisions that balance protection, affordability, and long-term financial goals, giving them the choices, support, and peace of mind they need when it matters most.",
     ctaText: "See Your Options",
-    ctaUrl: "/contact",
+    ctaUrl: DISCOVERY_CALL_URL,
     iconType: "heart",
   },
   {
@@ -87,7 +88,7 @@ export const services: Service[] = [
     shortDescription:
       "Helping families preserve, protect, and transfer wealth in a way that reflects their values and long-term goals.",
     intro:
-      "Building wealth is only part of the journey. Equally important is ensuring that what you've worked hard to build is protected, organized, and passed on according to your wishes.",
+      "Building wealth is only part of the journey. What is equally important is ensuring that what you've worked hard to build is protected, organized, and passed on according to your wishes.",
     body: "Legacy building and wealth transfer planning helps families prepare for the future by creating strategies that protect assets, provide clarity, and help ensure loved ones are cared for when the time comes. The goal is not simply to transfer wealth, but to transfer it in a way that supports your family's values, priorities, and long-term vision.\n\nOur approach begins with understanding your family, your assets, and the legacy you hope to leave behind. We help you evaluate existing plans, identify potential gaps, and explore strategies that can help simplify the transfer of wealth and reduce uncertainty for future generations.",
     bulletPoints: [
       "Protect and preserve family assets",
@@ -100,7 +101,7 @@ export const services: Service[] = [
     closing:
       "A legacy is about the security, opportunities, values, and impact you leave for the people you love.",
     ctaText: "See Your Options",
-    ctaUrl: "/contact",
+    ctaUrl: DISCOVERY_CALL_URL,
     iconType: "star",
   },
   {
@@ -110,18 +111,19 @@ export const services: Service[] = [
       "Helping individuals and couples create retirement strategies designed to support income, lifestyle, and financial confidence throughout retirement.",
     intro:
       "Retirement today can last 20, 30, or even 40 years. We help individuals and couples create a retirement strategy designed to support their lifestyle, provide reliable income, and adapt to life's changing circumstances.",
-    body: "By evaluating your savings, income sources, Social Security benefits, retirement goals, and future expenses, we help you build a plan that balances today's needs with tomorrow's opportunities.\n\nThe result is greater confidence, clarity, and peace of mind as you prepare for the years ahead.",
+    body: "By evaluating your savings, income sources, Social Security benefits, retirement goals, and future expenses, we help you build a plan that balances today's needs with tomorrow's opportunities. The result is greater confidence, clarity, and peace of mind as you prepare for the years ahead.",
     bulletPoints: [
-      "Evaluate savings, income sources, and Social Security benefits",
-      "Create strategies for reliable and sustainable retirement income",
-      "Balance current lifestyle needs with long-term financial goals",
-      "Adapt your plan as life circumstances and priorities change",
-      "Build confidence and clarity for the retirement you've worked toward",
+      "Create a sustainable retirement income strategy",
+      "Maximize Social Security and pension benefits",
+      "Evaluate retirement savings and investment accounts",
+      "Plan for healthcare and long-term care expenses",
+      "Develop tax-efficient withdrawal strategies",
+      "Adjust your plan as life circumstances and goals change",
     ],
     closing:
-      "The result is greater confidence, clarity, and peace of mind as you prepare for the years ahead.",
-    ctaText: "Get Started",
-    ctaUrl: "/contact",
+      "Comprehensive retirement planning helps you make informed decisions and prepare for a secure and fulfilling retirement.",
+    ctaText: "See Your Options",
+    ctaUrl: DISCOVERY_CALL_URL,
     iconType: "chart",
   },
   {
@@ -143,7 +145,7 @@ export const services: Service[] = [
     closing:
       "Financial confidence is about having a plan that helps you move forward with clarity, independence, and peace of mind.",
     ctaText: "See Your Options",
-    ctaUrl: "/contact",
+    ctaUrl: DISCOVERY_CALL_URL,
     iconType: "woman",
   },
   {
@@ -163,9 +165,9 @@ export const services: Service[] = [
       "Support long-term family and legacy goals",
     ],
     closing:
-      "Protecting children is about helping create opportunities, security, and support for the years ahead.",
+      "Protecting your children is about helping them create opportunities, security, and support for the years ahead.",
     ctaText: "See Your Options",
-    ctaUrl: "/contact",
+    ctaUrl: DISCOVERY_CALL_URL,
     iconType: "child",
   },
   {
@@ -174,8 +176,8 @@ export const services: Service[] = [
     shortDescription:
       "Helping families create trusts, protect inheritances, provide for children with special needs, and transfer wealth according to their wishes.",
     intro:
-      "Many families spend years building assets, creating opportunities, and planning for the future. Yet without proper planning, those assets may not be distributed, managed, or protected in the way they intended.",
-    body: "Trust and legacy planning helps families create a framework for preserving wealth, protecting beneficiaries, and providing long-term financial support for future generations. This planning can be especially important for families who wish to provide for young children, grandchildren, individuals with special needs, or loved ones who may require ongoing financial oversight and support.\n\nOur approach begins with understanding your family structure, goals, concerns, and long-term vision. We then help you explore strategies that can help ensure your wishes are carried out while providing protection and flexibility for those you care about most.",
+      "Helping families use trusts and estate planning strategies to protect assets, provide for loved ones, including those with special needs, and create a lasting legacy for future generations.",
+    body: "Many families spend years building assets, creating opportunities, and planning for the future. Yet without proper planning, those assets may not be distributed, managed, or protected in the way they intended.\n\nTrust and legacy planning helps families create a framework for preserving wealth, protecting beneficiaries, and providing long-term financial support for future generations. This planning can be especially important for families who wish to provide for young children, grandchildren, individuals with special needs, or loved ones who may require ongoing financial oversight and support.\n\nOur approach begins with understanding your family structure, goals, concerns, and long-term vision. We then help you explore strategies that can help ensure your wishes are carried out while providing protection and flexibility for those you care about most.",
     bulletPoints: [
       "Protect assets for future generations",
       "Establish trusts to help manage and distribute wealth according to your wishes",
@@ -188,8 +190,32 @@ export const services: Service[] = [
     closing:
       "A legacy is measured by the security, opportunities, and care you provide for the people who matter most.",
     ctaText: "See Your Options",
-    ctaUrl: "/contact",
+    ctaUrl: DISCOVERY_CALL_URL,
     iconType: "trust",
+  },
+  {
+    slug: "business-continuity-succession-legacy",
+    title: "Business Continuity, Succession & Legacy Planning",
+    shortDescription:
+      "Helping business owners protect their company, prepare for leadership transitions, and preserve the wealth they've worked hard to build for future generations.",
+    intro:
+      "Building a successful business requires years of sacrifice, commitment, and hard work. Yet many business owners spend more time growing their business than planning for what happens if they retire, become disabled, pass away, or decide to transition ownership in the future.",
+    body: "Business Continuity, Succession & Legacy Planning helps business owners prepare for the unexpected while creating a strategy for the future of their company, family, employees, and assets.\n\nOur approach begins with understanding your business structure, ownership goals, family priorities, and long-term vision. We then help identify planning opportunities designed to protect the business, preserve its value, and support a smooth transition when the time comes.",
+    bulletPoints: [
+      "Protect the business from financial disruption caused by unexpected life events",
+      "Support business continuity during ownership or leadership transitions",
+      "Help facilitate the transfer of ownership to family members, partners, or successors",
+      "Preserve business value for future generations",
+      "Protect key individuals whose contributions are essential to business operations",
+      "Coordinate business succession goals with personal estate and legacy plans",
+      "Create strategies for transferring wealth in a tax-efficient and organized manner",
+      "Help ensure family members, employees, and stakeholders are considered in long-term planning decisions",
+    ],
+    closing:
+      "A successful business is a legacy of hard work, opportunity, and impact. Proper planning helps ensure that legacy continues to benefit the people and causes that matter most to you.",
+    ctaText: "See Your Options",
+    ctaUrl: DISCOVERY_CALL_URL,
+    iconType: "briefcase",
   },
   {
     slug: "employee-financial-protection-benefits",
@@ -210,7 +236,7 @@ export const services: Service[] = [
     closing:
       "Investing in your employees is an investment in the people who help make your business successful.",
     ctaText: "See Your Options",
-    ctaUrl: "/contact",
+    ctaUrl: DISCOVERY_CALL_URL,
     iconType: "office",
   },
 ];
@@ -236,7 +262,7 @@ export const events: Event[] = [
     location: "Virtual Webinar",
     description:
       "A hands-on workshop designed to help families understand the basics of income protection, life insurance, and building a financial safety net. Perfect for families at any stage of their financial journey.",
-    registerUrl: "/contact",
+    registerUrl: DISCOVERY_CALL_URL,
   },
   {
     id: "2",
@@ -247,7 +273,7 @@ export const events: Event[] = [
     location: "Virtual Webinar",
     description:
       "Explore strategies for creating reliable retirement income, maximizing Social Security benefits, and building a retirement plan that supports the lifestyle you've worked hard to achieve.",
-    registerUrl: "/contact",
+    registerUrl: DISCOVERY_CALL_URL,
   },
   {
     id: "3",
@@ -258,7 +284,7 @@ export const events: Event[] = [
     location: "Virtual Webinar",
     description:
       "A special event for women navigating financial decisions at every stage of life. Topics include income protection, retirement planning, and building long-term financial confidence.",
-    registerUrl: "/contact",
+    registerUrl: DISCOVERY_CALL_URL,
   },
   {
     id: "4",
@@ -269,7 +295,7 @@ export const events: Event[] = [
     location: "Virtual Webinar",
     description:
       "A focused Q&A session on estate planning, trust strategies, and legacy planning. Bring your questions and learn how to protect and transfer your wealth according to your wishes.",
-    registerUrl: "/contact",
+    registerUrl: DISCOVERY_CALL_URL,
   },
 ];
 
