@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { EMAIL, PHONE_HREF, PHONE_NUMBER } from "../lib/data";
+import { useState } from "react";
+import { ADDRESS, DISCOVERY_CALL_URL, EMAIL, PHONE_HREF, PHONE_NUMBER } from "../lib/data";
 
 const socialLinks = [
   {
@@ -55,6 +56,14 @@ const socialLinks = [
 
 export default function Footer() {
   const pathname = usePathname();
+  const [exploreForm, setExploreForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    consent: false,
+    submitted: false,
+  });
 
   return (
     <footer className="bg-navy-dark">
@@ -135,6 +144,167 @@ export default function Footer() {
                 Sign Up
               </button>
             </form>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact & Explore Your Options */}
+      <div className="bg-navy-dark border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Left: Contact info */}
+            <div>
+              <h2
+                className="text-2xl font-bold text-white mb-4"
+                style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+              >
+                Contact Us
+              </h2>
+              <p className="text-white/70 leading-relaxed mb-2">
+                It is your future, you should have control over it. We offer personalized financial planning strategies designed around your goals.
+              </p>
+              <p className="text-white/70 leading-relaxed mb-6">
+                Contact us today to explore your options.
+              </p>
+              <a
+                href={DISCOVERY_CALL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-brand hover:bg-brand-dark text-white font-semibold rounded-full text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 mb-8 cursor-pointer"
+              >
+                Schedule a Discovery Call
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <ul className="space-y-3">
+                {ADDRESS && (
+                  <li className="flex items-start gap-3 text-white/60 text-sm">
+                    <svg className="w-4 h-4 text-brand shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    {ADDRESS}
+                  </li>
+                )}
+                <li>
+                  <a href={PHONE_HREF} className="flex items-center gap-3 text-white/60 hover:text-white text-sm transition-colors duration-200">
+                    <svg className="w-4 h-4 text-brand shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    {PHONE_NUMBER}
+                  </a>
+                </li>
+                <li>
+                  <a href={`mailto:${EMAIL}`} className="flex items-center gap-3 text-white/60 hover:text-white text-sm transition-colors duration-200">
+                    <svg className="w-4 h-4 text-brand shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    {EMAIL}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Right: Explore Your Options form */}
+            <div>
+              <h2
+                className="text-2xl font-bold text-white mb-2"
+                style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+              >
+                Explore Your Options
+              </h2>
+              <p className="text-white/60 text-sm mb-6 leading-relaxed">
+                Complete the form below and a member of our team will reach out to discuss the available planning options.
+              </p>
+              {exploreForm.submitted ? (
+                <div className="bg-brand/15 border border-brand/30 rounded-2xl p-8 text-center">
+                  <p className="text-white font-semibold mb-1">Thank you!</p>
+                  <p className="text-white/60 text-sm">We&apos;ll be in touch soon to discuss your options.</p>
+                </div>
+              ) : (
+                <form
+                  className="space-y-3"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    setExploreForm((f) => ({ ...f, submitted: true }));
+                  }}
+                >
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                      <label htmlFor="exploreFirstName" className="sr-only">First Name</label>
+                      <input
+                        id="exploreFirstName"
+                        type="text"
+                        placeholder="First Name"
+                        autoComplete="given-name"
+                        required
+                        value={exploreForm.firstName}
+                        onChange={(e) => setExploreForm((f) => ({ ...f, firstName: e.target.value }))}
+                        className="w-full px-4 py-3 bg-white/8 border border-white/15 rounded-xl text-white placeholder-white/40 text-sm focus:outline-none focus:border-brand focus:bg-white/12 transition-all duration-200"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="exploreLastName" className="sr-only">Last Name</label>
+                      <input
+                        id="exploreLastName"
+                        type="text"
+                        placeholder="Last Name"
+                        autoComplete="family-name"
+                        required
+                        value={exploreForm.lastName}
+                        onChange={(e) => setExploreForm((f) => ({ ...f, lastName: e.target.value }))}
+                        className="w-full px-4 py-3 bg-white/8 border border-white/15 rounded-xl text-white placeholder-white/40 text-sm focus:outline-none focus:border-brand focus:bg-white/12 transition-all duration-200"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="exploreEmail" className="sr-only">Email Address</label>
+                    <input
+                      id="exploreEmail"
+                      type="email"
+                      placeholder="Email Address"
+                      autoComplete="email"
+                      required
+                      value={exploreForm.email}
+                      onChange={(e) => setExploreForm((f) => ({ ...f, email: e.target.value }))}
+                      className="w-full px-4 py-3 bg-white/8 border border-white/15 rounded-xl text-white placeholder-white/40 text-sm focus:outline-none focus:border-brand focus:bg-white/12 transition-all duration-200"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="explorePhone" className="sr-only">Phone Number</label>
+                    <input
+                      id="explorePhone"
+                      type="tel"
+                      placeholder="Phone Number"
+                      autoComplete="tel"
+                      value={exploreForm.phone}
+                      onChange={(e) => setExploreForm((f) => ({ ...f, phone: e.target.value }))}
+                      className="w-full px-4 py-3 bg-white/8 border border-white/15 rounded-xl text-white placeholder-white/40 text-sm focus:outline-none focus:border-brand focus:bg-white/12 transition-all duration-200"
+                    />
+                  </div>
+                  <div className="flex items-start gap-3 text-left">
+                    <input
+                      type="checkbox"
+                      id="exploreConsent"
+                      required
+                      checked={exploreForm.consent}
+                      onChange={(e) => setExploreForm((f) => ({ ...f, consent: e.target.checked }))}
+                      className="mt-0.5 w-4 h-4 rounded accent-brand cursor-pointer shrink-0"
+                    />
+                    <label htmlFor="exploreConsent" className="text-white/50 text-xs leading-relaxed cursor-pointer">
+                      I consent to receive communications from Finesse Plans regarding financial planning services. I understand I can opt out at any time.
+                    </label>
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full py-3.5 bg-brand hover:bg-brand-dark text-white font-semibold rounded-xl transition-colors duration-200 cursor-pointer text-sm"
+                  >
+                    Submit
+                  </button>
+                </form>
+              )}
+            </div>
           </div>
         </div>
       </div>
