@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { EMAIL, PHONE_HREF, PHONE_NUMBER } from "../lib/data";
+import { DISCOVERY_CALL_URL, EMAIL, PHONE_HREF, PHONE_NUMBER } from "../lib/data";
 import ContactForm from "../components/ContactForm";
 
 export const metadata: Metadata = {
@@ -34,9 +34,19 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-            We&apos;re here to help. Schedule a discovery call or reach out directly —
-            we&apos;d love to learn more about your family&apos;s financial goals.
+            It is your future, you should have control over it. We offer personalized financial planning strategies designed around your goals.
+            Contact us today to explore your options.
           </p>
+          <div className="mt-8">
+            <a
+              href={DISCOVERY_CALL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 bg-brand hover:bg-brand-dark text-white font-bold rounded-xl transition-colors duration-200 shadow-md hover:shadow-lg text-base"
+            >
+              Schedule a Discovery Call
+            </a>
+          </div>
         </div>
       </section>
 
@@ -109,10 +119,10 @@ export default function ContactPage() {
                 </h3>
                 <ul className="space-y-4">
                   {[
-                    { step: "01", text: "A brief conversation about your family's financial situation and goals" },
-                    { step: "02", text: "An overview of how we can help based on your unique circumstances" },
-                    { step: "03", text: "An opportunity to ask questions with no pressure or obligation" },
-                    { step: "04", text: "Clear next steps if you decide Finesse Plans is the right fit" },
+                    { step: "01", text: "We will explore your current situation and what's been holding you back" },
+                    { step: "02", text: "We will get clear on what you actually want, not just what seems possible" },
+                    { step: "03", text: "We will share how we work and whether we are the right fit to support you" },
+                    { step: "04", text: "You'll leave with clarity, regardless of whether we work together" },
                   ].map((item) => (
                     <li key={item.step} className="flex items-start gap-3">
                       <span className="text-brand-light font-bold text-xs shrink-0 w-6">{item.step}</span>

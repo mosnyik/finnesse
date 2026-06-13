@@ -93,6 +93,7 @@ export default function ContactForm() {
         <input
           type="checkbox"
           id="contactConsent"
+          required
           className="mt-0.5 w-4 h-4 rounded accent-brand cursor-pointer flex-shrink-0"
         />
         <label htmlFor="contactConsent" className="text-gray-500 text-xs leading-relaxed cursor-pointer">
