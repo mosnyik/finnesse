@@ -76,10 +76,10 @@ export default function AboutPage() {
                 long-term value.
               </p>
               <Link
-                href={DISCOVERY_CALL_URL}
+                href="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-brand hover:bg-brand-dark text-white font-semibold rounded-full text-base transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
               >
-                Speak With Us Today
+                Speak with Finesse Plans Today
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -158,6 +158,17 @@ export default function AboutPage() {
                 <p className="text-gray-600 text-sm leading-relaxed">{pillar.body}</p>
               </div>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-brand hover:bg-brand-dark text-white font-bold rounded-full text-base transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
+            >
+              Speak with Finesse Plans Today
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
